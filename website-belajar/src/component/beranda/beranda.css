@@ -1,0 +1,391 @@
+body,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* Change this to your desired background color */
+  padding: 10px 20px;
+  border-bottom: 1px solid #e7e7e7; /* Optional: Adds a top border */
+}
+
+.navbar .logo {
+  max-height: 50px; /* Adjust as needed */
+}
+
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: black;
+  font-size: 16px;
+}
+
+.navbar .nav-links a:hover {
+  color: #f64920;
+  font-size: 16px;
+}
+
+.navbar .profile img {
+  border-radius: 50%;
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none; /* Hide nav links on smaller screens */
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.wrapper {
+  width: 180vh;
+  height: 450px;
+  margin-top: 100px;
+  background:
+  /* top, transparent black, faked with gradient */ linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/card-image5.png") no-repeat center center;
+  background-size: cover;
+
+  position: relative; /* Ensure wrapper is positioned relative */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  position: relative; /* Ensure ul is positioned relative */
+}
+
+.wrapper ul li {
+  width: 135vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.wrapper ul li h1 {
+  font-size: 35px;
+}
+
+.wrapper ul li {
+  color: #ffffff; /* Set the text color to white */
+}
+
+.wrapper ul li button {
+  width: 45%;
+  height: 45px;
+  background: #3ecf4cff;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+div h2 {
+  padding-top: 50px;
+}
+
+.navlink {
+  padding: 20px;
+  padding-left: 0;
+}
+
+.navlink {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.navlink a {
+  padding: 30px;
+  padding-left: 0;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  text-decoration: none; /* Remove the underline */
+  color: black;
+  position: relative; /* Ensure the links are positioned relative */
+}
+
+.navlink a::after {
+  content: "";
+  position: absolute;
+  background-color: #f64920;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -1px;
+  transition: 0.3s;
+}
+
+.navlink a:hover {
+  color: #f64920;
+}
+
+.navlink a:hover::after {
+  width: 30%;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between; /* Center cards horizontally */
+  margin: 30px 0;
+}
+
+.card-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width of card-container */
+  max-width: 400px; /* Maximum width of each card-border */
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  width: 100%; /* Full width of card-border */
+  position: relative; /* Allow for absolute positioning of child elements */
+}
+
+.card img {
+  width: 100%;
+  height: 10em;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+  position: relative; /* Ensure relative positioning for child elements */
+}
+
+.card h2 {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.card p {
+  padding: 0 10px;
+  color: #777;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  position: relative; /* Allows for absolute positioning of text */
+  margin-top: 10px;
+}
+
+.profile-info img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.profile-info span {
+  font-size: 14px;
+  color: #333;
+  z-index: 1; /* Ensure the name is on top */
+  margin-top: -10px;
+}
+
+.profile-info small {
+  font-size: 12px;
+  color: #777;
+  position: absolute; /* Position absolutely within .profile-info */
+  bottom: -5px; /* Position at the bottom of .profile-info */
+  left: 10px; /* Align to the left of .profile-info */
+  margin-left: 40px; /* Adjust margin as needed to position it correctly */
+  z-index: 0; /* Ensure it's behind other content */
+}
+
+.wrapper-down {
+  width: 180vh;
+  height: 450px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/card-image5.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.wrapper-down ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.wrapper-down ul li {
+  width: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.wrapper-down ul li h1 {
+  font-size: 35px;
+}
+
+.wrapper-down ul li p {
+  filter: brightness(0.7);
+  font-size: 18px;
+}
+
+.wrapper-down ul li {
+  color: #ffffff;
+}
+
+.wrapper-down ul li button {
+  width: 20%;
+  height: 45px;
+  background: #ffbd3a;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.inputWithButton {
+  position: relative;
+  height: 100px;
+  width: 500px; /* Increase the width as needed */
+}
+
+.inputWithButton input {
+  width: 100%;
+  height: 55px;
+  padding-right: 80px; /* Adjust padding to fit button */
+  padding-left: 20px;
+  border-radius: 10px;
+}
+
+.inputWithButton button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.wrapper-white {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the start of the container */
+  background-color: white;
+  padding: 20px;
+}
+
+.wrapper-white a {
+  text-decoration: none;
+  color: #ffffff;
+  filter: brightness(0.5);
+}
+
+.left-list {
+  list-style: none;
+  padding: 0;
+  width: 30%;
+}
+
+.left-list li {
+  padding-bottom: 10px;
+}
+
+.left-list li img {
+  padding-left: 0; /* Reset any padding if there was any */
+  margin-left: -20px; /* Move the image more to the left */
+}
+
+.right-lists {
+  display: flex;
+  margin-left: auto; /* Pushes the right lists to the far right */
+}
+
+.right-list li {
+  padding-bottom: 10px;
+}
+
+.right-list {
+  list-style: none;
+  padding: 0;
+  margin-left: 30px; /* Adds space between the two right lists */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* Change this to your desired background color */
+  padding: 20px;
+  border-top: 1px solid #e7e7e7; /* Optional: Adds a top border */
+}
+
+.footer-left {
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-right {
+  display: flex;
+  gap: 10px; /* Adjust the gap between images */
+}
+
+.footer-right img {
+  width: 40px; /* Adjust the width as needed */
+  height: auto;
+  cursor: pointer; /* Optional: Adds a pointer cursor on hover */
+}
